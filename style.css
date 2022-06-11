@@ -21,6 +21,7 @@ button {
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,9 +34,28 @@ button {
   background-color: #1A1A1D;
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  overflow: hidden;
 }
 
-.card__answer-btn {
+.card__hint {
+  position: absolute;
+  z-index: 2;
+  top: 60px;
+  left: 0;
+  height: calc(100% - 60px);
+  width: 100%;
+  background-color: inherit;
+  padding: 10px;
+  transform: translateX(100%);
+  transition: transform 1s;
+}
+
+.card__hint._active {
+  display: block;
+  transform: translateX(0);
+}
+
+.card__hint-btn {
   align-self: flex-end;
   width: 40px;
   height: 40px;
@@ -51,6 +71,7 @@ button {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 15px;
 }
 
 .card__prev-btn, .card__next-btn {
