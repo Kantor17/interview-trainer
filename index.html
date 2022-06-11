@@ -6,8 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interview trainer</title>
   <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:regular" rel="stylesheet" />
 </head>
-<body>
+<body class="body">
+  <main class="main">
+    <div class="card">
+      <button class="card__answer-btn"><img class="card__icon" src="assets/question.svg" alt="question mark"></button>
+      <p class="card__question">Зачем нужен DOCTYPE?</p>
+      <div class="card__controls">
+        <button class="card__prev-btn"><img class="card__icon" src="./assets/chevron.svg" alt="arrow left"></button>
+        <p class="card__counter">0/100</p>
+        <button class="card__next-btn"><img class="card__icon" src="./assets/chevron.svg" alt="arrow right"></button>
+      </div>
+    </div>
+  </main>
   <script src="./index.js"></script>
 </body>
 </html>

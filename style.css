@@ -3,3 +3,67 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.body {
+  background-color: #272727;
+  color: #FFF;
+  font-family: Roboto;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.main {
+  padding-top: 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 450px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  background-color: #1A1A1D;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.card__answer-btn {
+  align-self: flex-end;
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+}
+
+.card__question {
+  text-align: center;
+  font-size: 18px;
+}
+
+.card__controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card__prev-btn, .card__next-btn {
+  height: 25px;
+  width: 30px;
+}
+
+.card__icon {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card__prev-btn .card__icon {
+  transform: rotate(180deg);
+}
+
