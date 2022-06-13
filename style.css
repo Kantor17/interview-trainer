@@ -79,6 +79,10 @@ button {
   width: 30px;
 }
 
+.card__prev-btn._inactive, .card__next-btn._inactive {
+  pointer-events: none;
+}
+
 .card__icon {
   max-width: 100%;
   max-height: 100%;
