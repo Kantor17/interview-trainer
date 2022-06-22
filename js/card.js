@@ -58,8 +58,6 @@ export default class {
   }
 
   checkActivity() {
-    console.log(this.currentLevels);
-    console.log(this.levelCounter);
     if(this.levelCounter + 1 >= this.currentLevels.length) {
       this.nextBtn.classList.add('_inactive');
     }else if(this.levelCounter < 1) {
@@ -93,6 +91,7 @@ export default class {
         this.currentLevels = allLevels;
     }
     this.nextBtn.classList.remove('_inactive');
+    this.hintE.classList.remove('_active');
     this.changeLevel();
   }
 }
