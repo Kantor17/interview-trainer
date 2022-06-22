@@ -71,7 +71,6 @@ export default class {
   }
 
   changeTopic(topic) {
-    this.levelCounter = 0;
     switch(topic) {
       case 'ALL':
         this.currentLevels = this.allLevels;
@@ -91,6 +90,7 @@ export default class {
       default:
         this.currentLevels = allLevels;
     }
+    this.levelCounter = 0;
     this.hintE.classList.remove('_active');
     this.changeLevel();
   }
@@ -101,6 +101,7 @@ export default class {
       [this.currentLevels[i], [this.currentLevels[j]]] = [this.currentLevels[j], [this.currentLevels[i]]];
     }
     this.levelCounter = 0;
+    this.hintE.classList.remove('_active');
     this.changeLevel();
   }
 }
