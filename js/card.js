@@ -61,6 +61,7 @@ export default class {
     if(this.levelCounter + 1 >= this.currentLevels.length) {
       this.nextBtn.classList.add('_inactive');
     }else if(this.levelCounter < 1) {
+      this.nextBtn.classList.remove('_inactive');
       this.prevBtn.classList.add('_inactive');
     }else {
       [this.prevBtn, this.nextBtn].forEach(button => {
@@ -90,8 +91,16 @@ export default class {
       default:
         this.currentLevels = allLevels;
     }
-    this.nextBtn.classList.remove('_inactive');
     this.hintE.classList.remove('_active');
+    this.changeLevel();
+  }
+
+  shuffle() {
+    for(let i = this.currentLevels.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [this.currentLevels[i], [this.currentLevels[j]]] = [this.currentLevels[j], [this.currentLevels[i]]];
+    }
+    this.levelCounter = 0;
     this.changeLevel();
   }
 }

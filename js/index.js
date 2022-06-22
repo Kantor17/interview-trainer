@@ -10,3 +10,7 @@ topicButtons.forEach(button => {
     button.classList.add('_active');
   });
 });
+
+document.querySelector('.shuffle-btn').addEventListener('click', () => {
+  card.shuffle();
+});
