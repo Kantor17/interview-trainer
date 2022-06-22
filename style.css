@@ -50,20 +50,36 @@ button {
   height: 30px;
 }
 
-.header__topic-btn[data-topic="ALL"]._active {
+.header__topic-btn[data-topic="ALL"]:hover {
   box-shadow: 0 0 25px #FF0000;
 }
-.header__topic-btn[data-topic="HTML&CSS"]._active {
+.header__topic-btn[data-topic="HTML&CSS"]:hover {
   box-shadow: 0 0 25px #1E90FF;
 }
-.header__topic-btn[data-topic="JS"]._active {
+.header__topic-btn[data-topic="JS"]:hover {
   box-shadow: 0 0 25px #FFFF00;
 }
-.header__topic-btn[data-topic="DS&ALGS"]._active {
+.header__topic-btn[data-topic="DS&ALGS"]:hover {
   box-shadow: 0 0 25px #00FF7F;
 }
-.header__topic-btn[data-topic="OOP"]._active {
+.header__topic-btn[data-topic="OOP"]:hover {
   box-shadow: 0 0 25px #FF00FF;
+}
+
+.header__topic-btn[data-topic="ALL"]._active {
+  background-color: hsl(0, 100%, 50%, 0.7);
+}
+.header__topic-btn[data-topic="HTML&CSS"]._active {
+  background-color: hsl(210, 100%, 56%, 0.7);
+}
+.header__topic-btn[data-topic="JS"]._active {
+  background-color: hsl(60, 100%, 50%, 0.7);
+}
+.header__topic-btn[data-topic="DS&ALGS"]._active {
+  background-color: hsl(150, 100%, 50%, 0.7);
+}
+.header__topic-btn[data-topic="OOP"]._active {
+  background-color: hsl(300, 100%, 50%, 0.7);
 }
 
 .main {
