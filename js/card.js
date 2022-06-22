@@ -3,7 +3,11 @@ export default class {
   constructor(cardE) {
     this.levelCounter = 0;
     this.currentLevels = allLevels;
-
+    this.allLevels = allLevels;
+    this.htmlCssLevels = allLevels.filter(level => level.topic === 'HTML&CSS');
+    this.jsLevels = allLevels.filter(level => level.topic === 'JS');
+    this.dsAlgsLevels = allLevels.filter(level => level.topic === 'DS&ALGS');
+    this.oopLevels = allLevels.filter(level => level.topic === 'OOP');
     this.questionE = cardE.querySelector('.card__question');
     this.counterE = cardE.querySelector('.card__counter');
 
@@ -31,6 +35,22 @@ export default class {
 
   changeLevel() {
     const level = this.currentLevels[this.levelCounter];
+    switch(level.topic) {
+      case 'HTML&CSS':
+        this.questionE.className = 'card__question _text-glow-blue';
+        break;
+      case 'JS':
+        this.questionE.className = 'card__question _text-glow-yellow';
+        break;
+      case 'DS&ALGS':
+        this.questionE.className = 'card__question _text-glow-green';
+        break;
+      case 'OOP':
+        this.questionE.className = 'card__question _text-glow-pink';
+        break;
+      default:
+        this.questionE.className = 'card__question';
+    }
     this.questionE.textContent = level.question;
     this.counterE.textContent = `${this.levelCounter + 1}/${this.currentLevels.length}`;
     this.hintE.textContent = level.answer;
@@ -49,5 +69,27 @@ export default class {
     }
   }
 
-
+  changeTopic(topic) {
+    this.levelCounter = 0;
+    switch(topic) {
+      case 'ALL':
+        this.currentLevels = this.allLevels;
+        break;
+      case 'HTML&CSS':
+        this.currentLevels = this.htmlCssLevels;
+        break;
+      case 'JS':
+        this.currentLevels = this.jsLevels;
+        break;
+      case 'DS&ALGS':
+        this.currentLevels = this.dsAlgsLevels;
+        break;
+      case 'OOP':
+        this.currentLevels = this.oopLevels;
+        break;
+      default:
+        this.currentLevels = allLevels;
+    }
+    this.changeLevel();
+  }
 }

@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interview trainer</title>
   <link rel="stylesheet" href="./style.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:regular" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:regular, 600" rel="stylesheet" />
 </head>
+
 <body class="body">
+  <div class="container">
+    <header class="header">
+      <h2 class="header__title">Choose a topic</h2>
+      <ul class="header__list">
+        <li class="header__item">
+          <button class="header__topic-btn _active" data-topic="ALL">All</button></li>
+        <li class="header__item">
+          <button class="header__topic-btn" data-topic="HTML&CSS">HTML&CSS</button>
+        </li>
+        <li class="header__item">
+          <button class="header__topic-btn" data-topic="JS">JavaScript</button>
+        </li>
+        <li class="header__item">
+          <button class="header__topic-btn" data-topic="DS&ALGS">Data structures&Algorithms</button>
+        </li>
+        <li class="header__item">
+          <button class="header__topic-btn" data-topic="OOP">OOP</button>
+        </li>
+      </ul>
+  </div>
+  </header>
   <main class="main">
     <div class="card">
       <div class="card__hint"></div>
       <button class="card__hint-btn"><img class="card__icon" src="assets/question.svg" alt="question mark"></button>
-      <p class="card__question"></p>
+      <p class="card__question _glow-blue"></p>
       <div class="card__controls">
         <button class="card__prev-btn"><img class="card__icon" src="./assets/chevron.svg" alt="arrow left"></button>
         <p class="card__counter">0/0</p>
@@ -23,4 +46,5 @@
   </main>
   <script type="module" src="./js/index.js"></script>
 </body>
+
 </html>

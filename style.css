@@ -5,7 +5,7 @@
 }
 
 .body {
-  background-color: #272727;
+  background-color: #191919;
   color: #FFF;
   font-family: Roboto;
 }
@@ -13,11 +13,61 @@
 button {
   background-color: inherit;
   border: none;
+  color: inherit;
   cursor: pointer;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+}
+
+.header__title {
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.header__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+.header__topic-btn {
+  background-color: #1A1A1D;
+  border-radius: 10px;
+  width: 200px;
+  height: 30px;
+}
+
+.header__topic-btn[data-topic="ALL"]._active {
+  box-shadow: 0 0 25px #FF0000;
+}
+.header__topic-btn[data-topic="HTML&CSS"]._active {
+  box-shadow: 0 0 25px #1E90FF;
+}
+.header__topic-btn[data-topic="JS"]._active {
+  box-shadow: 0 0 25px #FFFF00;
+}
+.header__topic-btn[data-topic="DS&ALGS"]._active {
+  box-shadow: 0 0 25px #00FF7F;
+}
+.header__topic-btn[data-topic="OOP"]._active {
+  box-shadow: 0 0 25px #FF00FF;
 }
 
 .main {
-  padding-top: 50px;
+  padding: 50px 0;
 }
 
 .card {
@@ -34,7 +84,7 @@ button {
   background-color: #1A1A1D;
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .card__hint {
@@ -90,5 +140,25 @@ button {
 
 .card__prev-btn .card__icon {
   transform: rotate(180deg);
+}
+
+._text-glow-green {
+  text-shadow: 0 0 10px #00FF7F;
+}
+
+._text-glow-yellow {
+  text-shadow: 0 0 10px #FFFF00;
+}
+
+._text-glow-blue {
+  text-shadow: 0 0 10px #1E90FF;
+}
+
+._text-glow-pink {
+  text-shadow: 0 0 10px #FF00FF;
+}
+
+._text-glow-red {
+  text-shadow: 0 0 10px #FF0000;
 }
 
